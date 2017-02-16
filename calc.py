@@ -1,36 +1,10 @@
-#!/usr/bin/env python
-
-# Copyright 2016 -- Levi Starrett & Jay Hankins
-# for educational purposes only
-#
-# For use in CS 190: https://github.com/Purdue-CSUSB/CS-190-F2016/
-#
-# Calculator -- a four function calculator commandline tool
-
 import sys
 
-# -------------------------------------------------------- #
-# -- CALCULATOR FUNCTIONS -------------------------------- #
-# -------------------------------------------------------- #
-
-# Add function
-# a -- addend
-# b -- augend
 def calc(P, I, J, K):
     return (P*I*J/K)/100
 
-# Subtract function
-# a -- minuend
-# b -- subtrahend
-
 def msg():
-   return "Hello Master!"
-# -------------------------------------------------------- #
-
-
-# -------------------------------------------------------- #
-# -- MAIN FUNCTIONAILTY -- DO NOT EDIT ------------------- #
-# -------------------------------------------------------- #
+   return "k"
 # P - initial deposit money
 # S - resulting money
 # K - days in year
@@ -53,7 +27,7 @@ while (True):
         J = int(J)
     except ValueError:
         print "Invalid number argument..."
-        op = None
+
 
     # decide function
         #print "Invalid operation..."
@@ -65,3 +39,15 @@ while (True):
         break
 
 # -------------------------------------------------------- #
+
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_msg(self):
+        self.assertEqual(msg(), 'kf')
+
+
+if __name__ == '__main__':
+    unittest.main()
+
