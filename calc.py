@@ -37,7 +37,8 @@ def mult(a, b):
 def div(a, b):
     return a / b
 
-
+def msg():
+   return "Hello Master!"
 # -------------------------------------------------------- #
 
 
@@ -71,6 +72,8 @@ while (True):
             print "Product: ", mult(a, b)
         elif (op == "/"):
             print "Quotient: ", div(a, b)
+    	elif (op == "m"):
+	    print "", msg()
         else:
             print "Invalid operation..."
 
