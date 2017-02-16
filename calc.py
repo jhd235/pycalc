@@ -16,26 +16,12 @@ import sys
 # Add function
 # a -- addend
 # b -- augend
-def add(a, b):
-    return a + b
+def calc(P, I, J, K):
+    return (P*I*J/K)/100
 
 # Subtract function
 # a -- minuend
 # b -- subtrahend
-def sub(a, b):
-    return a - b
-
-# Multiply function
-# a -- multiplicand
-# b -- multiplier
-def mult(a, b):
-    return a * b
-
-# Divide function
-# a -- dividend
-# b -- divisor
-def div(a, b):
-    return a / b
 
 def msg():
    return "Hello Master!"
@@ -45,38 +31,35 @@ def msg():
 # -------------------------------------------------------- #
 # -- MAIN FUNCTIONAILTY -- DO NOT EDIT ------------------- #
 # -------------------------------------------------------- #
-
-a = None
-b = None
-op = None
+# P - initial deposit money
+# S - resulting money
+# K - days in year
+# I - interest rate
+# J- capitalisation period days
+P = None
+S = None
+K = 365
+I = None
+J = None
 
 while (True):
     # get input values
-    a = raw_input("Enter the first argument: ")
-    op = raw_input("Enter the operation: ")
-    b = raw_input("Enter the second argument: ")
+    P = raw_input("Enter Inintial money amount P: ")
+    I = raw_input("Enter Interest Rate: ")
+    J = raw_input("Enter capitalisation period: ")
     try:
-        a = int(a)
-        b = int(b)
+        P = int(P)
+        I = int(I)
+        J = int(J)
     except ValueError:
         print "Invalid number argument..."
         op = None
 
     # decide function
-    if (op != None):
-        if (op == "+"):
-            print "Sum: ", add(a, b)
-        elif (op == "-"):
-            print "Difference: ", sub(a, b)
-        elif (op == "*"):
-            print "Product: ", mult(a, b)
-        elif (op == "/"):
-            print "Quotient: ", div(a, b)
-    	elif (op == "m"):
-	    print "", msg()
-        else:
-            print "Invalid operation..."
-
+        #print "Invalid operation..."
+    print "result", calc(P, I, J ,K)
+    #print "yo", msg()
+    #print K
     q = raw_input("Quit? [y/n] ")
     if (q == "y" or q == "Y"):
         break
